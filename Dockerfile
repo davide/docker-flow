@@ -23,4 +23,7 @@ RUN eval `opam config env`
 
 ENV PATH /home/opam/.opam/4.01.0/bin/:$PATH
 
-CMD ["flow", "--help"]
+VOLUME /app
+WORKDIR /app
+
+CMD ["flow", "check"]
